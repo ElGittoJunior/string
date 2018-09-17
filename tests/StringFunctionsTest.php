@@ -86,10 +86,10 @@ class StringFunctionsTest extends PHPUnit_Framework_TestCase
 
 	public function testReplace()
 	{
-		$this->assertEquals('This is a Gears\String.', Gears\String\replace($this->string, 'string', 'Gears\String'));
-		$this->assertEquals($this->string, Gears\String\replace($this->string, 'foo', 'Gears\String'));
-		$this->assertEquals('This is a Gears\String.', Gears\String\replace($this->string, '/string/', 'Gears\String', true));
-		$this->assertEquals($this->string, Gears\String\replace($this->string, '/ string /', 'Gears\String', true));
+		$this->assertEquals('This is a Gears\String.', Gears\String\replace($this->string, 'string', 'Gears\Str'));
+		$this->assertEquals($this->string, Gears\String\replace($this->string, 'foo', 'Gears\Str'));
+		$this->assertEquals('This is a Gears\String.', Gears\String\replace($this->string, '/string/', 'Gears\Str', true));
+		$this->assertEquals($this->string, Gears\String\replace($this->string, '/ string /', 'Gears\Str', true));
 		$this->assertEquals('This is a STRING.', Gears\String\replace($this->string, '/string/', function($matches){ return strtoupper($matches[0]); }, true));
 	}
 
